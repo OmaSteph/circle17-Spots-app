@@ -2,6 +2,7 @@
 const likeButtons = document.querySelectorAll('.like-btn');
 const newPostBtn = document.getElementById('newPostBtn');
 const newPostForm = document.getElementById('newPostForm');
+const newPostModal = document.getElementById('newPostModal');
 
 // Like button functionality
 likeButtons.forEach(button => {
@@ -18,13 +19,31 @@ likeButtons.forEach(button => {
   });
 });
 
-// New post functionality
-newPostBtn.addEventListener('click', function() {
+// Modal Open
+function openModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.style.display = 'block';
+    }
+}
+
+// Modal Close
+function closeModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.style.display = 'none';
+    }
+}
+
+// Add Event Listener to New Post Button
+newPostBtn.addEventListener('click', () => {
     openModal('newPostModal');
 });
 
+// Add Event Listener to Submit Button
 newPostForm.addEventListener('submit', function(e) {
     e.preventDefault();
+
     const title = document.getElementById('postTitle').value;
     const imageFile = document.getElementById('postImage').files[0];
 
@@ -35,9 +54,10 @@ newPostForm.addEventListener('submit', function(e) {
             liked: false
         };
         
-    posts.unshift(newPost); // Add to beginning
-    renderPosts();
-    closeModal('newPostModal');
-    this.reset();
+        console.log('New Post:', newPost);
+
+        closeModal('newPostModal');
+        this.reset();
+    }
 }
-});
+);
