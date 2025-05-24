@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script src="spots.js"></script>
     <title>SPOTS APP</title>
 </head>
 
@@ -15,18 +16,6 @@
     </div>
 
     <main class="container">
-        <!-- New Post Modal -->
-    <div id="newPostModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>Create New Post</h2>
-            <form id="newPostForm">
-                <input type="file" id="postImage" accept="image/*" required>
-                <input type="text" id="postTitle" placeholder="Title" required>
-                <button type="submit">Create Post</button>
-            </form>
-        </div>
-    </div>
         <div class="profile-container">
             <div class="profile-card">
                 <div class="profile-img">
@@ -37,78 +26,16 @@
                         <h2 class="multiline-ellipsis">Bessie Coleman</h2>
                         <p class="multiline-ellipsis">Civil Aviator</p>
                     </div>
-                    <a class="edit-link" href="./Form.html"><img src="./circle17icons/edit icon/edit icon.png" alt="edit"> <span>Edit Profile</span></a>
+                    <a class="edit-link" href="#"><img src="./circle17icons/edit icon/edit icon.png" alt="edit"> <span>Edit Profile</span></a>
                 </div>
             </div>
     
             <button class="new-post-button"> <img src="./circle17icons/plus icon/plus sign.png" alt="plus sign"> <span>New Post</span></button>
         </div>
-
     </main>
 
     <section class="container">
-        <div class="posts-container">
-            <div class="post-card">
-                <div class="post-card-img">
-                    <img src="./CIRCLE 17 PICTURES/PICTURES/Mask group.png" alt="post-1" class="post-img">
-                </div>
-                <div class="title-container">
-                    <p class="post-name">Val Thorens</p>
-                    <button class="like-btn"><i class="fa-regular fa-heart like-btn"></i>
-</button>
-                </div>
-            </div>
-            <div class="post-card">
-                <div class="post-card-img">
-                    <img src="./CIRCLE 17 PICTURES/PICTURES/Restaurant terrace.png" alt="post-2" class="post-img">
-                </div>
-                <div class="title-container">
-                    <p class="post-name">Restaurant Terrace</p>
-                    <button class="like-btn"><i class="fa-regular fa-heart like-btn"></i>
-</button>
-                </div>
-            </div>
-            <div class="post-card">
-                <div class="post-card-img">
-                    <img src="./CIRCLE 17 PICTURES/PICTURES/An outdoor cafe.png" alt="post-3" class="post-img">
-                </div>
-                <div class="title-container">
-                    <p class="post-name">An outdoor cafe</p>
-                    <button class="like-btn"><i class="fa-regular fa-heart like-btn"></i>
-</button>
-                </div>
-            </div>
-            <div class="post-card">
-                <div class="post-card-img">
-                    <img src="./CIRCLE 17 PICTURES/PICTURES/A very long bridge.png" alt="post-4" class="post-img">
-                </div>
-                <div class="title-container">
-                    <p class="post-name">A very long bridge</p>
-                    <button class="like-btn"><i class="fa-regular fa-heart like-btn"></i>
-</button>
-                </div>
-            </div>
-            <div class="post-card">
-                <div class="post-card-img">
-                    <img src="./CIRCLE 17 PICTURES/PICTURES/Tunnel with morning light.png" alt="post-5" class="post-img">                
-                </div>
-                <div class="title-container">
-                    <p class="post-name">Tunnel with morning light</p>
-                    <button class="like-btn"><i class="fa-regular fa-heart like-btn"></i>
-</button>
-                </div>
-            </div>
-            <div class=post-card>
-                <div class="post-card-img">
-                    <img src="./CIRCLE 17 PICTURES/PICTURES/Mountain house.png" alt="post-6" class="post-img">
-                </div>
-                <div class="title-container">
-                    <p class="post-name">Mountain house</p>
-                    <button class="like-btn"><i class="fa-regular fa-heart like-btn"></i>
-</button>
-                </div>
-            </div>
-        </div>
+        <div class="posts-container"></div>
     </section>
     
     <footer>
@@ -116,6 +43,7 @@
             <p>2023 &copy; Spots</p>
         </div>
     </footer>
-    <script src="script.js"></script>
-    </body>
-    </html>
+    
+</body>
+
+</html>
