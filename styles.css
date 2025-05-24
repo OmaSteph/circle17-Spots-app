@@ -86,7 +86,7 @@ body {
 
 .multiline-ellipsis {
   display: -webkit-box;
-  -webkit-line-clamp: 3;
+  -webkit-line-lamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -174,9 +174,10 @@ body {
 .like-btn {
   width: 23px;
   height: 20px;
-  opacity: 40%;
-  align-self: center;
+  align-self: center; /* removed the opacity feature to make it stay red after it has been clicked */
   border: none;
+  background:none;
+  font-size: 20px;
 }
 
 .like-btn:hover {
@@ -244,6 +245,7 @@ footer {
   }
 }
 
+<<<<<<< HEAD
 /* Modal image preview  */
 .modal {
   display: none;
@@ -300,3 +302,11 @@ footer {
   margin-top: 10px;
   font-size: 16px;
 }
+=======
+
+
+
+
+
+
+>>>>>>> main
