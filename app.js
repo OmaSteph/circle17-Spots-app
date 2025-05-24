@@ -31,15 +31,12 @@ const imageData = [
     }
 ];
 
-// const likeButton = new likeIcon();
-// likeIcon.src = `circle17icons/like icon`;
-
-
 const postsContainer = document.getElementById("postContainer");
+const modal = document.getElementById('myModal');
 
 imageData.forEach (data => {
-    const postCard = document.createElement("div");
-    postCard.className = "post-card";
+    const postCard = document.createElement('div');
+    postCard.className = 'post-card';
 
     const postCardImg = document.createElement('div');
     postCardImg.className = 'post-card-img'
@@ -72,15 +69,52 @@ imageData.forEach (data => {
 
     postsContainer.appendChild(postCard);
 
+    // const isLiked = localStorage.getItem('liked') === 'true';
+
     likeButton.addEventListener ("click", () => {
         console.log('i clicked the button')
         likeButton.classList.toggle('liked');
+        // likeButton.textContent = currentlyLiked;
+
+        // localStorage.setItem('liked', currentlyLiked);
 
         if (likeButton.classList.contains('liked')) {
             console.log('liked button')
-            // likeIcon.classList.remove('far fa-heart');
-            // likeIcon.classList.add('fa fa-heart');
+            likeIcon.classList.remove('far', 'fa-heart');
+            likeIcon.classList.add('fas', 'fa-heart');
+        } else {
+            likeIcon.classList.remove('fas', 'fa-heart');
+            likeIcon.classList.add('far', 'fa-heart');
         }
     });
-});
 
+    const modalImg = document.getElementById('modal-img');
+    const captionText = document.getElementById('caption');
+    
+
+    postCardImg.addEventListener ('click', () => {
+        console.log('i clicked the postcard');
+        modal.style.display = 'block';
+        modalImg.src = img.src;
+        captionText.textContent = postName.textContent;
+        console.log(modal);
+        console.log(captionText);
+    });
+
+    const span = document.getElementsByClassName("close")[0];
+    span.onclick = function() { 
+        modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+        if (event.target === modal) {
+          modal.style.display = 'none';
+        }
+    }
+
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+          modal.style.display = 'none';
+        }
+      });
+});
