@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -21,46 +22,33 @@
     </div>
 
     <main class="container">
-        <!-- New Post Modal -->
-    <div id="newPostModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>Create New Post</h2>
-            <form id="newPostForm">
-                <input type="file" id="postImage" accept="image/*" required>
-                <input type="text" id="postTitle" placeholder="Title" required>
-                <button type="submit">Create Post</button>
-            </form>
-        </div>
-    </div>
         <div class="profile-container">
             <div class="profile-card">
                 <div class="profile-img">
-                    <img src="./circle17icons/image icon(header)/image.png" alt="Bessie Coleman">
+                    <img src="./circle17icons/image icon(header)/image.png" alt="Profile Image">
                 </div>
                 <div class="profile-info">
                     <div class="profile-name">
                         <h2 class="multiline-ellipsis">Bessie Coleman</h2>
                         <p class="multiline-ellipsis">Civil Aviator</p>
                     </div>
-                    <a class="edit-link" href="./Form.html"><img src="./circle17icons/edit icon/edit icon.png" alt="edit"> <span>Edit Profile</span></a>
+                    <!-- Edit profile link -->
+                    <a class="edit-link" href="#" id="editProfileBtn">
+                        <img src="./circle17icons/edit icon/edit icon.png" alt="Edit Icon">
+                        <span>Edit Profile</span>
+                    </a>
                 </div>
             </div>
-            <a class="edit-link" href="#"
-              ><img src="./circle17icons/edit icon/edit icon.png" alt="edit" />
-              <span>Edit Profile</span></a
-            >
-          </div>
-        </div>
-
-        <button class="new-post-button">
-          <img src="./circle17icons/plus icon/plus sign.png" alt="plus sign" />
-          <span>New Post</span>
-        </button>
+            <button class="new-post-button" id="newPostBtn">
+                <img src="./circle17icons/plus icon/plus sign.png" alt="Plus Icon">
+                <span>New Post</span>
+            </button>
+        
       </div>
     </main>
 
-    <section class="container">
+        <!-- This part needs to be deleted -->
+<section class="container">
         <div class="posts-container">
             <div class="post-card">
                 <div class="post-card-img">
@@ -190,12 +178,31 @@
         </div>
       </div>
     </section>
-    
+<!-- End of section to be deleted -->
+
+
+
+        <!-- New Post Modal -->
+    <div id="newPostModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+
+            <!-- Create New Post -->
+            <h2>Create New Post</h2>
+            <form id="newPostForm">
+                <input type="file" id="postImage" accept="image/*" required>
+                <input type="text" id="postTitle" placeholder="Title" required>
+                <button type="submit">Create Post</button>
+            </form>
+        </div>
+    </div>
+
     <footer>
         <div class="footer">
-            <p>2023 &copy; Spots</p>
+            <p>2025 &copy; Spots</p>
         </div>
     </footer>
-    <script src="script.js"></script>
-    </body>
-    </html>
+
+    <script src="./script.js"></script>
+</body>
+</html>
