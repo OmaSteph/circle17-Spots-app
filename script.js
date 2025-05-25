@@ -97,7 +97,11 @@ document.addEventListener('DOMContentLoaded', function() {
     // Like functionality
     postsContainer.addEventListener('click', function(e) {
         const likeBtn = e.target.closest('.like-btn');
-        s
+        if (likeBtn) {
+            const index = likeBtn.dataset.index;
+            posts[index].liked = !posts[index].liked;
+            renderPosts();
+        }
     // Image preview
         const postImg = e.target.closest('.post-img');
         if (postImg) {
